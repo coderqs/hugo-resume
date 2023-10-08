@@ -25,6 +25,7 @@ jobs:
           echo "HUGO_EXTENDED=${HUGO_EXTENDED}">> $GITHUB_OUTPUT
           echo "-------------"
           ls -al
+          ls -al themes/hugo-resume
           echo "-----end-----"
 
       - name: Setup hugo
@@ -34,7 +35,11 @@ jobs:
           extended: ${{ steps.hugo-info.outputs.HUGO_EXTENDED }} #true 
 
       - name: Build
-        run: hugo --minify --gc
+        run: |
+          hugo --minify --gc
+          echo "-------------"
+          ls -al public
+          echo "-----end-----"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
