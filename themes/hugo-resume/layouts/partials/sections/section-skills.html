@@ -1,0 +1,17 @@
+<section id="skills">
+    <div class="section-title">
+        {{ i18n "resume.skills" }}
+    </div>
+    <div class="section-content">
+      {{ range .Site.Params.skills }}
+      <div class="block">
+        <div class="block-title">
+          {{ .title }}
+        </div>
+        <div class="block-content">
+          {{ .items }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+</section>
