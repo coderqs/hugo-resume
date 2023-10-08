@@ -23,6 +23,9 @@ jobs:
           . ./.HUGO_VERSION
           echo "HUGO_VERSION=${HUGO_VERSION}">> $GITHUB_OUTPUT
           echo "HUGO_EXTENDED=${HUGO_EXTENDED}">> $GITHUB_OUTPUT
+          echo "-------------"
+          ls -al
+          echo "-----end-----"
 
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
