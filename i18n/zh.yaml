@@ -1,0 +1,19 @@
+resume:
+  profile:
+    other: 基础信息
+  summary:
+    other: 个人总结
+  social:
+    other: 社交
+  contact:
+    other: 联系方式
+  awards:
+    other: 奖项
+  education: 
+    other: 教育经历
+  skills: 
+    other: 专业技能
+  experience: 
+    other: 工作经历
+  projects: 
+    other: 项目经验

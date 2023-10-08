@@ -1,0 +1,72 @@
+profile:
+  name: coderqs
+  jobtitle: C++ Programmer
+
+contact:
+  - icon: fa-envelope
+    text: xxxx@xxx.com
+
+  - icon: fa-globe
+    text: blog.coderqs.com
+    link: https://blog.coderqs.com
+
+  - icon: fa-github
+    text: coderqs
+    link: https://github.com/coderqs
+  
+  - icon: fa-weixin
+    text: 清松
+    qrcode: img/weixin.png
+
+education:
+  - university: xxx大学
+    edu: 工学学士
+    duration: "2012/09 = 2016/07"
+    location: 中国
+    major: 计算机科学与技术
+
+  - university: xxx大学
+    edu: 工学硕士
+    duration: "2016/09 = 2020/07"
+    location: 中国
+    major: 计算机科学与技术
+
+skills:
+  - title: "程序设计"
+    items: "C/C++, Java, Python, Ruby, PHP, HTML/CSS, JavaScript, Vue"
+  - title: "计算机系统"
+    items: "Linux/Unix, 设计模式, 敏捷开发, 面向对象, 数据库设计, 多线程编程"
+  - title: "其它"
+    items: "Sublime Text, git, shell"
+
+experience:
+  - title: 研发工程师
+    duration: "2022/06 - 至今"
+    company: B 公司
+    description: |
+       我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，
+       我最困难的问题是什么，我采取了什么措施，最后结果如何。
+       这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+    keywords: 
+      - C/C++
+      - Linux
+
+  - title: 研发工程师
+    duration: "2020/08 - 2022/05"
+    company: A 公司
+    description: |
+       我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，
+       我最困难的问题是什么，我采取了什么措施，最后结果如何。
+       这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+    keywords: 
+      - C/C++
+      - QT
+
+projects:
+  - name: "Hugo-Resume"
+    description: 一个基于 Jekyll 的极简风格响应式简历模板
+    contribution: 贡献者
+
+  - name: "你的项目"
+    description: "一个非常强大的开源项目，使用了若干强力技术，大大提升了生产力"
+    contribution: "创建者和维护者"

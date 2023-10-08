@@ -1,0 +1,44 @@
+profile:
+  name: coderqs
+  jobtitle: C++ Programmer
+
+contact:
+  - icon: fa-envelope
+    text: xxx@xxx.com
+
+  - icon: fa-globe
+    text: blog.coderqs.com
+    link: https://blog.coderqs.com
+
+  - icon: fa-github
+    text: coderqs
+    link: https://github.com/coderqs
+  
+  - icon: fa-weixin
+    text: 清松
+    qrcode: img/weixin.jpg
+
+education:
+  - university: xxx
+    edu: xxx
+    duration: "2012/09 = 2016/07"
+    location: xxxx
+    major: xxxx
+
+skills:
+  - title: 
+    items:
+
+experience:
+  - title: 
+    duration: 
+    company: A corporation
+    description: 
+    keywords: 
+      - C/C++
+
+projects:
+  - name: "cool project"
+    description: "A cool project"
+    contribution: principal
+

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="container">
+    <header>
+      {{ partial "header" . }}
+    </header>
+    {{ partial "sections/section-education" . }}
+    {{ partial "sections/section-skills" . }}
+    {{ partial "sections/section-experience" . }}
+    {{ partial "sections/section-projects" . }}
+</div>
+  
+{{ template "_internal/google_analytics.html" . }}
+
+{{ end }}

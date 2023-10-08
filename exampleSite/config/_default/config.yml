@@ -1,0 +1,15 @@
+baseURL: 127.0.0.1
+title: My Resume
+theme: hugo-resume
+
+defaultContentLanguage: zh
+hasCJKLanguage: true
+
+googleAnalytics: "UA-XXXXXXX-Y"
+
+color: 
+
+languages:
+  zh:
+    languageCode: zh
+    languageName: 简体中文

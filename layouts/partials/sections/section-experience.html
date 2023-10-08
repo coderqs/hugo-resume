@@ -1,0 +1,27 @@
+<section id="experience">
+    <div class="section-title">
+      {{ i18n "resume.experience" }}
+    </div>
+    <div class="section-content">
+      {{ range .Site.Params.experience }}
+        <div class="block">
+            <div class="block-title">
+                {{ .title }}
+            </div>
+            <div class="block-subtitle">
+                {{ .duration }} | {{ .company }}
+            </div>
+            <div class="block-content">
+                {{ .description }}
+            </div>
+            {{ with .keywords }}
+            <div class="keywords">
+                {{ range . }}
+                <span>{{ . }} </span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+      {{ end }}
+    </div>
+</section>

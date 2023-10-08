@@ -1,0 +1,20 @@
+<section id="education">
+  <div class="section-title">
+    {{ i18n "resume.education" }}
+  </div>
+  <div class="section-content">
+    {{ range .Site.Params.education }}
+    <div class="block">
+      <div class="block-title">
+        {{ .university }}
+      </div>
+      <div class="block-subtitle">
+        {{ .duration }} | {{ .location }}
+      </div>
+      <div class="block-subtitle-bold">
+        {{ .major }} | {{ .edu }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
