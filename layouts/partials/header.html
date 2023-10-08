@@ -1,0 +1,25 @@
+<div class="name-wrapper">
+  <div id="fullname" class="title">
+    {{ .Site.Params.profile.name }}
+  </div>
+  <div id="jobtitle" class="sub-title">
+    {{ .Site.Params.profile.jobtitle }}
+  </div>
+</div>
+<div id="contact" class="contact">
+  {{ range .Site.Params.contact }}
+    <div class="contact-item {{ with .qrcode }} hoverable {{ end }}">
+    {{ with .link }}
+      <a href="{{ . }}">
+    {{ end }}
+        <i class="fa {{ .icon }} aria-hidden="true></i> {{ .text }}
+    {{ with . }}
+      </a>
+    {{ end }}
+
+    {{ with .qrcode }} 
+    <img src="{{ . }}" alt="Image" />
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
