@@ -42,7 +42,7 @@ jobs:
         with:
           personal_token: ${{ secrets.TOKEN }}
           external_repository: coderqs/article
-          publish_dir: ./public
+          publish_dir: ./public/*
           #keep_files: true
           user_name: coderqs
           user_email: <coderqs@coderqs.com>
