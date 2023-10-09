@@ -1,46 +1,25 @@
-name: CI
-on: 
+name: Trigger my_resume Workflow
+
+on:
   push:
     branches:
-      - my_resume
+      - main
+
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  trigger_my_resume:
+    runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
 
     steps:
-      - name: Checkout themes
-        uses: actions/checkout@v2
+      - name: Trigger my_resume Workflow
+        uses: actions/github-script@v4
         with:
-          repository: coderqs/hugo-resume
-          ref: my_resume
-          subtree: true
-
-      - name: Read Hugo info
-        id: hugo-info
-        run: |
-          . ./.HUGO_VERSION
-          echo "HUGO_VERSION=${HUGO_VERSION}">> $GITHUB_OUTPUT
-          echo "HUGO_EXTENDED=${HUGO_EXTENDED}">> $GITHUB_OUTPUT
-
-      - name: Setup hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '${{ steps.hugo-info.outputs.HUGO_VERSION }}' #"latest"
-          extended: ${{ steps.hugo-info.outputs.HUGO_EXTENDED }} #true 
-
-      - name: Build
-        run: hugo --minify --gc
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.TOKEN }}
-          external_repository: coderqs/hugo-resume
-          publish_dir: ./public
-          #   keep_files: true
-          user_name: coderqs
-          user_email: <coderqs@coderqs.com>
-          publish_branch: gh-pages
-          cname: resume.coderqs.com
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data } = await github.repos.createDispatchEvent({
+              owner: context.repo.owner,
+              repo: 'coderqs/hugo-resume',
+              event_type: 'my_resume'
+            });
+            console.log('Dispatched My Resume workflow');
