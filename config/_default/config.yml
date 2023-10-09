@@ -1,11 +1,11 @@
-baseURL: 127.0.0.1
-title: My Resume
+baseURL: resume.coderqs.com
+title: 韩涛的个人简历
 theme: hugo-resume
 
 defaultContentLanguage: zh
 hasCJKLanguage: true
 
-googleAnalytics: "UA-XXXXXXX-Y"
+googleAnalytics: "G-N7J9N4KYLS"
 
 color: 
 
