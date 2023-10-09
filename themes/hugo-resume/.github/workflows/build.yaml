@@ -37,11 +37,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.TOKEN }}
-          external_repository: coderqs/article
+          external_repository: coderqs/hugo-resume
           publish_dir: ./public
           #   keep_files: true
           user_name: coderqs
           user_email: <coderqs@coderqs.com>
           publish_branch: gh-pages
           cname: resume.coderqs.com
-          timezone: 'Asia/Shanghai'
