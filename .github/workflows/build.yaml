@@ -32,10 +32,6 @@ jobs:
       - name: Build
         run: |
           hugo --minify --gc
-          pwd
-          echo "-------------"
-          ls -al public
-          echo "-----end-----"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -49,9 +45,4 @@ jobs:
           publish_branch: gh-pages
           cname: resume.coderqs.com
       
-      - name: debug
-        run: |
-          echo "-----11------"
-          ls -al public
-          echo "-----end-----"
            
