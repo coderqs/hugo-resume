@@ -20,7 +20,10 @@ jobs:
       - name: update subtree
         run: |
           ls -la
-          git subtree pull --prefix=hugo-resume/themes/hugo-resume/ origin main --squash
+          echo "------------"
+          ls -la themes
+          git subtree add --prefix=themes/hugo-resume/ origin main
+          git subtree pull --prefix=themes/hugo-resume/ origin main --squash
 
       - name: Read Hugo info
         id: hugo-info
