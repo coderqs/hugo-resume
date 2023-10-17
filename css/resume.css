@@ -80,7 +80,7 @@ header {
     top: 100%;
     left: 0;
     display: none;
-    width: 200px;
+    width: 15rem;
     height: auto; }
   .contact-item.hoverable:hover img {
     display: block; }
@@ -150,24 +150,38 @@ section {
 }
 
 .block .keywords {
-  padding-top: 7px; }
+  padding-top: 0.5rem; }
 
 .block .keywords span {
     display: inline-block;
     font-size: 1rem;
     line-height: 1.2rem;
     color: #adb5bd;
-    padding: 0 14px;
+    padding: 0 1rem;
     margin-right: 0.2rem;
     border: 1px solid #cfd1d7;
-    border-radius: 50px;
-    margin-bottom: 7px;
+    border-radius: 3.5rem;
+    margin-bottom: 0.5rem;
 }
 
 #projects .block-content {
     font-size: 1rem;
     line-height: 1.5;
     white-space: pre-wrap;
+}
+
+#skills .block-content ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  margin-inline-start: 0rem;
+  margin-inline-end: 0rem;
+  padding-inline-start: 1.5rem;
+}
+
+#skills .block-content li {
+  list-style-type: disc;
 }
 
 @media screen and (max-width: 48rem) {
