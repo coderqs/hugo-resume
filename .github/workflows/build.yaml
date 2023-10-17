@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - my_resume
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -15,6 +16,10 @@ jobs:
         with:
           repository: coderqs/hugo-resume
           ref: my_resume
+
+      - name: update subtree
+        run: |
+          git subtree pull --prefix=themes/hugo-resume/ origin main --squash
 
       - name: Read Hugo info
         id: hugo-info
