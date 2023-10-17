@@ -11,11 +11,15 @@ jobs:
       TZ: Asia/Shanghai
 
     steps:
-      - name: clone code
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: coderqs/hugo-resume
+          ref: my_resume
+
+      - name: update subtree
         run: |
-          git clone https://github.com/coderqs/hugo-resume.git -b my_resume
-          ls -la
-          cd hugo-resume
+          git clone https://github.com/coderqs/hugo-resume.git -b my_resume .
           git subtree pull --prefix=themes/hugo-resume/ origin main --squash
 
       - name: Read Hugo info
