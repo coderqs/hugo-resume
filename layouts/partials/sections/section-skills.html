@@ -9,7 +9,9 @@
           {{ .title }}
         </div>
         <div class="block-content">
-          {{ .items }}
+          {{ range .items }}
+            <ul><li>{{- . -}}</li></ul>
+          {{ end }}
         </div>
       </div>
       {{ end }}
