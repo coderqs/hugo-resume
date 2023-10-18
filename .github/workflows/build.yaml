@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - my_resume
-      - main
   workflow_run:
     workflows: 
       - "My Workflow"
