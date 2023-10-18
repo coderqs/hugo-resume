@@ -4,6 +4,8 @@ on:
     branches:
       - my_resume
       - main
+  #workflow_run:
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
