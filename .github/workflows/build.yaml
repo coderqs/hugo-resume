@@ -4,8 +4,7 @@ on:
     branches:
       - my_resume
   workflow_run:
-    workflows: 
-      - "My Workflow"
+    workflows: [Main Workflow]
     types:
       - completed
 
