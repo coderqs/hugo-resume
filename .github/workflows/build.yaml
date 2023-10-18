@@ -5,7 +5,8 @@ on:
       - my_resume
       - main
   workflow_run:
-    workflows: [My Workflow]
+    workflows: 
+      - "My Workflow"
     types:
       - completed
 
