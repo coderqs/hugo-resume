@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: update subtree
         run: |
+          git config --global user.email "coderqs@coderqs.com"
+          git config --global user.name "coderqs"
           git clone https://github.com/coderqs/hugo-resume.git  -b my_resume .
           git subtree pull --prefix=themes/hugo-resume/ origin main --squash
 
