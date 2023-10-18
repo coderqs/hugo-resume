@@ -5,10 +5,11 @@ on:
     branches:
       - main
   workflow_run:
-    workflows: 
-      - Release site
+    workflows: [Release site]
     types:
       - completed
+    branches:
+      - my_resume
 
 jobs:
   build:
