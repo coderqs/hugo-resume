@@ -4,8 +4,6 @@ on:
     branches:
       - my_resume
       - main
-  #workflow_run:
-
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -15,7 +13,6 @@ jobs:
     steps:
       - name: update subtree
         run: |
-          ls -la 
           git clone https://github.com/coderqs/hugo-resume.git  -b my_resume .
           git subtree pull --prefix=themes/hugo-resume/ origin main --squash
 
