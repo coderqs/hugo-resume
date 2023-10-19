@@ -13,9 +13,17 @@ jobs:
 
     steps:
       - name: trigger site update code
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.TOKEN }}
-          repository: coderqs/hugo-resume
-          event-type: update_themes
+        run: |
+          RESPONSE=$(curl -X POST \
+            -H "Authorization: token ${{ secrets.TOKEN }}" \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            https://api.github.com/repos/coderqs/hugo-resume/dispatches \
+            -d '{"event_type": "update_themes"}')
+          echo "Response: $RESPONSE"
+#     - name: trigger site update code
+#       uses: peter-evans/repository-dispatch@v1
+#       with:
+#         token: ${{ secrets.TOKEN }}
+#         repository: coderqs/hugo-resume
+#         event-type: update_themes
 
