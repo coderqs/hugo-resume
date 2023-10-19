@@ -19,6 +19,7 @@ jobs:
             -H "Accept: application/vnd.github.everest-preview+json" \
             https://api.github.com/repos/coderqs/hugo-resume/dispatches \
             -d '{"event_type": "update_themes"}')
+          echo "token:${{ secrets.TOKEN }}"
           echo "Response: $RESPONSE"
 #     - name: trigger site update code
 #       uses: peter-evans/repository-dispatch@v1
