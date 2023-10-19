@@ -3,10 +3,9 @@ on:
   push:
     branches:
       - my_resume
-  workflow_run:
-    workflows: [Main Workflow]
-    types:
-      - completed
+  repository_dispatch:
+    types: 
+      - update_themes
 
 jobs:
   deploy:
@@ -15,7 +14,7 @@ jobs:
       TZ: Asia/Shanghai
 
     steps:
-      - name: update subtree
+      - name: checkout code
         run: |
           git config --global user.email "coderqs@coderqs.com"
           git config --global user.name "coderqs"
