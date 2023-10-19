@@ -12,5 +12,10 @@ jobs:
       TZ: Asia/Shanghai
 
     steps:
-      - run: env
+      - name: trigger site update code
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.TOKEN }}
+          repository: coderqs/hugo-resume
+          event-type: update_themes
 
