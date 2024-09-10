@@ -5,14 +5,26 @@
     <div class="section-content">
       {{ range .Site.Params.projects }}
       <div class="block">
-        <div class="block-title">
-          {{- .name -}}
+        <div class="block-header">
+          <div class="block-title">
+            {{- .name -}}
+          </div>
+          <span class="block-date">
+            {{- .date -}}
+          </span>
         </div>
         <div class="block-subtitle">
             {{- .contribution -}}
         </div>
         <div class="block-content">
-            {{-  .description -}}
+            {{ range .description }}
+            <div class="block-content-item-title">
+              {{- .title -}}
+            </div>
+            <div class="block-content-item-content">
+              {{- .content -}}
+            </div>
+            {{ end }}
         </div>
       </div>
       {{ end }}

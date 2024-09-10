@@ -139,12 +139,31 @@ section {
   margin-bottom: .4rem;
   font-weight: bold; }
 
+.block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;}
+
+.block-date {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;}
+
 .block-subtitle {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #adb5bd; }
 
-.block-content {
+.block-content { 
+  font-size: 1rem;
+  line-height: 1.5;}
+
+.block-content-item-title {
+  font-size: 1rem;
+  line-height: 1.5; 
+  font-weight: bold; }
+
+.block-content-item-content {
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -169,7 +188,7 @@ section {
     margin-bottom: 0.5rem;
 }
 
-#projects .block-content {
+#projects .block-content-item-content {
     font-size: 1rem;
     line-height: 1.5;
     white-space: pre-wrap;
